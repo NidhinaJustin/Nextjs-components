@@ -68,7 +68,9 @@ const Calendar = () => {
     .fill(null)
     .concat([...Array(daysInMonth)].map((val, i) => i + 1));
   return (
+    <>
     <div className="p-3 bg-white space-y-0.5">
+
       <div className="grid grid-cols-5 items-center gap-x-3 mx-1.5 pb-3">
         <div className="col-span-1">
           <button
@@ -190,6 +192,10 @@ const Calendar = () => {
         })}
       </div>
     </div>
+
+   {selectedDate &&<h2 className="text-white p-3">Selected Date: {selectedDate ? selectedDate.toLocaleDateString() : "None"}</h2> } 
+
+</>
   );
 };
 
